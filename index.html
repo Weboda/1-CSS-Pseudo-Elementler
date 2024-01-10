@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        .param p::first-letter {
+            font-size: 2em;
+            color: blue;
+        }
+
+        p::first-line {
+            color: red;
+            font-size: 30px;
+        }
+
+        #technologies li::before {
+            content: " 💯✓";
+            display: inline-flex;
+            width: 40px;
+            height: 20px;
+            background-color: green;
+            margin-right: 5px;
+        }
+
+        #technologies li::after {
+            content: " 💯✓";
+            display: inline-flex;
+            width: 40px;
+            height: 20px;
+            background-color: blueviolet;
+            margin-left: 5px;
+        }
+
+        #technologies li::marker {
+            content: "🚀";
+            color: orangered;
+            font-size: 2em;
+        }
+
+        #js::before {
+            content: "🔥";
+        }
+
+        .required::after {
+            content: "*";
+            color: red;
+        }
+        input::after {
+            content: "DENEME";
+        }
+        *::selection{
+            background-color: greenyellow;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <h1>Pseudo Element'leri</h1>
+        <div class="param">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aut corrupti doloremque. Totam, nemo
+                molestias.</p>
+
+        </div>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore officiis
+            neque aperiam, velit placeat possimus doloribus sint adipisci nam earum
+            excepturi cumque quis provident veritatis quia, alias voluptatibus numquam
+            qui ducimus amet! Molestiae tenetur asperiores totam assumenda dolore nisi
+            nobis magnam porro dolores cum excepturi sunt praesentium doloremque
+            cumque, iste aperiam repudiandae. Adipisci ipsam deserunt dolorum.
+            Veritatis, nisi, ab odit sit cumque rerum repudiandae est sequi earum
+            vitae libero vel.
+        </p>
+        <br />
+        <ul id="technologies">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li id="js">JS</li>
+        </ul>
+        <br />
+        <form>
+            <div>
+                <label for="first_name" class="required">İsim</label>
+                <input id="first_name" name="first_name" type="text" required placeholder="Lütfen isminizi giriniz." />
+            </div>
+            <br />
+            <div>
+                <label for="last_name" class="required">Soyisim</label>
+                <input id="last_name" name="last_name" type="text" required />
+            </div>
+            <br />
+            <div>
+                <input id="age" name="age" type="number" min="12" max="100" />
+            </div>
+            <br />
+            <button type="submit">Formu Gönder</button>
+        </form>
+    </body>
+
+</html>
